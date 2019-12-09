@@ -1,0 +1,44 @@
+#timer {
+    
+}
+
+#intro-body {
+    text-align: center;
+}
+
+.card {
+border-color: teal;
+border-style: double;
+border-width: thick;
+background-color: rgb(248, 245, 245);
+padding-left: 5%;
+padding-right: 5%;
+padding-bottom: 5%;
+margin: auto;
+}
+
+.card-title {
+    text-align: center;
+}
+
+#start-quiz {
+    background-color: rgb(139, 11, 50);
+    color: white;
+    font-size: large;
+    margin: auto;
+    padding: 1%;
+    
+}
+
+.btn {
+    cursor: pointer;
+    display: block;
+}
+
+.quiz {
+    display: none;
+}
+
+.results {
+    display: none;
+}

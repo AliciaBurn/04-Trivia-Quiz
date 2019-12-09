@@ -1,0 +1,1 @@
+startButton.addEventListener("click", startGame);
