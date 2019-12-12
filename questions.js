@@ -26,13 +26,5 @@ var questions = [
     },  
   ];
  
-  for (var i = 0; i < questions.length; i++) {
-      var response = (questions[i]);
-      if(response == questions[i].answer){
-          score++;
-      } else {
-      }
-      console.log(questions[i].choices)
-
-      }
+ 
       
