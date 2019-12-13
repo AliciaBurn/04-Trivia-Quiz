@@ -1,3 +1,10 @@
+#high-score {
+    background-color: #008080;
+    color: white;
+    font-family: 'Rock Salt', cursive;
+    
+}
+
 #timer {
     text-align: right;
 }
@@ -7,10 +14,11 @@
 }
 
 .card {
-border-color: teal;
-border-style: double;
+background-color: rgb(10, 10, 10);
+border-color: #d1d105;
 border-width: thick;
-background-color: rgb(248, 245, 245);
+border-style: solid;
+color: white;
 padding-left: 5%;
 padding-right: 5%;
 padding-bottom: 5%;
@@ -19,10 +27,23 @@ margin: auto;
 
 .card-title {
     text-align: center;
+    font-family: 'Rock Salt', cursive;
+}
+
+.redText {
+    color: #b40404;
+}
+
+.blueText {
+    color: #008080;
+}
+
+.yellowText {
+    color: #d1d105;
 }
 
 #start-quiz {
-    background-color: rgb(139, 11, 50);
+    background-color: #b40404;
     color: white;
     font-size: large;
     margin: auto;
@@ -33,12 +54,27 @@ margin: auto;
 .btn {
     cursor: pointer;
     display: block;
+    background-color: #b40404;
+    color: white;
+    font-family: 'Rock Salt', cursive;
 }
 
 .quiz {
     display: none;
+    padding: 5%;
+
+}
+
+#quiz-question {
+    font-size: x-large;
 }
 
 .results {
     display: none;
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+}
+
+#initial-submit {
+    margin: auto;
 }

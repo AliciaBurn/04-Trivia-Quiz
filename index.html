@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Code Quiz</title>
+    <title>Friends Quiz</title>
 </head>
 <body>
 
       <div class="container-fluid">
-          <button type="button" class="btn btn-link">View High Score</button>
+          <button type="button" class="btn btn-lg btn-link" id="high-score">View High Score</button>
 
           <div id="Timer">
-          <p>Time: <span id="timeleft">75</span></p>
+          <p>Time: <span id="timeleft">90</span></p>
           </div>
       </div>
 
     
       <div class="card" style="width: 60rem;">
         <div id="intro-body">
-          <h1 class="card-title">Code Quiz</h1>
-          <h2 class="card-subtitle mb-2 text-muted">Test Your Knowledge</h2>
-          <h3 class="card-text">How much do you know about JavaScript? <br>Take our timed multiple choice quiz to find out.<br> Answer correct and earn a point. Answer wrong and lose time. <br>The one that answers the most amount of questions correct in the shortest amount of time will get you the highest score. Are you ready?</h3>
+          <h1 class="card-title">F <span class="redText">&#8226;</span> R <span class="blueText">&#8226;</span> I <span class="yellowText">&#8226;</span> E <span class="redText">&#8226;</span> N <span class="blueText">&#8226;</span> D <span class="yellowText">&#8226;</span> S  &nbsp; Quiz</h1>
+          <h2 class="card-subtitle mb-2 text-muted">The One With The Quiz.</h2>
+          <h3 class="card-text">How much do you know about &nbsp;  F <span class="redText">&#8226;</span> R <span class="blueText">&#8226;</span> I <span class="yellowText">&#8226;</span> E <span class="redText">&#8226;</span> N <span class="blueText">&#8226;</span> D <span class="yellowText">&#8226;</span> S? <br> Answer correct and earn a point. Answer wrong and lose time. <br>The one that answers the most amount of questions correct in the shortest amount of time will get you the highest score. Are you ready?</h3>
           <button type="button" class="btn btn-primary btn-lg btn-block" id="start-quiz">Start Quiz</button>
         </div>
       
         <div id="quiz-body" class="quiz">
           <div class="questions" id="quiz-question"></div>
+          <br>
           <br>
           <div id="answer-buttons" class="btn-style">
             <button class="btn" id="choice1"></button>
@@ -42,11 +44,24 @@
       
 
         <div id="result-body"  class="results">
-          <h2>All Done!</h2>
+          <h1>I'll Be There For You!</h1>
+
+          <img src="assets\Friends.jpg">
+          <h2>Score: </h2>
+
+          <form class="form-inline">
+              <div class="form-group mb-2">
+                <label class="sr-only">Initials</label>
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="">
+              </div>
+              <br>
+              <button type="submit" class="btn btn-primary mb-2" id="initial-submit">Submit</button>
+            </form>
         </div>
     </div>
     <script src="questions.js"></script>
     <script src="script.js"></script>
+    
     
 </body>
 </html>

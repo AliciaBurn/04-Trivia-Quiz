@@ -2,44 +2,63 @@ var startButton = document.getElementById("start-quiz");
 var questionContainerElement = document.getElementById("quiz-body")
 var answerButtonElement = document.getElementById("answer-buttons")
 var timeEl = document.getElementById("timeleft");
-var firstquestion = questions[0].title;
-var firstOption = questions[0].choices[0];
-var secondOption = questions[0].choices[1];
-var thirdOption = questions[0].choices[2];
-var fourthOption = questions[0].choices[3];
-var secondsLeft = 75;
-//var questions = "questions.js"
+var i = 0
+
+var secondsLeft = 90;
+var score = 0;
+
 
 startButton.addEventListener("click", function() {
         document.getElementById("intro-body").style.display = "none";
         document.getElementById("quiz-body").style.display = "block";
-        document.getElementById("quiz-question").textContent = firstquestion;
-        document.getElementById("choice1").textContent = firstOption;
-        document.getElementById("choice2").textContent = secondOption;
-        document.getElementById("choice3").textContent = thirdOption;
-        document.getElementById("choice4").textContent = fourthOption;
-         
-
-
+        document.getElementById("quiz-question").textContent = questions[i].title;
+        document.getElementById("choice1").textContent = questions[i].choices[0];
+        document.getElementById("choice2").textContent = questions[i].choices[1];
+        document.getElementById("choice3").textContent = questions[i].choices[2];
+        document.getElementById("choice4").textContent = questions[i].choices[3];
+        setTime()
+        changequestion()     
 });
 
-for (var i = 0; i < questions.length; i++) {
-    var response = (questions[i]);
-    if(response == questions[i].answer){
-        alert("Correct")
-    }
-    console.log(questions[i].answer)
 
-    }
+
+function changequestion(){
+    answerButtonElement.addEventListener("click", function() {
+     i++
+      document.getElementById("quiz-question").textContent = questions[i].title;
+      document.getElementById("choice1").textContent = questions[i].choices[0];
+      document.getElementById("choice2").textContent = questions[i].choices[1];
+      document.getElementById("choice3").textContent = questions[i].choices[2];
+      document.getElementById("choice4").textContent = questions[i].choices[3];
+
+      var chosenAnswer = ''//fill in;
+      if(chosenAnswer == (questions[0].answer)) {
+        
+
+      
+      }else {
+        secondsLeft -= 15;
+      }
+
+  
+    });
+}
+
+
+
+
+
 
     function setTime() {
         var timerInterval = setInterval(function() {
           secondsLeft--;
           timeEl.textContent = secondsLeft;
       
-          if(secondsLeft === 0) {
+          if(secondsLeft <= 0 || i > questions.length -1) {
+            //may need to change to >=0
             clearInterval(timerInterval);
-            sendMessage();
+            document.getElementById("quiz-body").style.display = "none";
+            document.getElementById("result-body").style.display = "block";
           }
       
         }, 1000);
@@ -50,8 +69,6 @@ for (var i = 0; i < questions.length; i++) {
       
       
       }
-      
-      setTime();
     
 
 
