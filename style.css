@@ -78,3 +78,9 @@ margin: auto;
 #initial-submit {
     margin: auto;
 }
+
+#high-score-body {
+    display: none;
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+}
