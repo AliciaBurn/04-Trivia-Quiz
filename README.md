@@ -3,8 +3,12 @@
 Read Me
 
 Project: FRIENDS TRIVIA QUIZ
+
 Author: Alicia Burn
+
 Date: 12/12/2019
+
+https://aliciaburn.github.io/04-homework/
 
 ******************************
 *  TABLE OF CONTENTS         *
